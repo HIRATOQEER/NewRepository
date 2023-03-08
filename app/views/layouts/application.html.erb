@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+    
+  
+  <p class="navbar-text float-right">
+<% if user2_signed_in? %>
+  Logged in as <strong><%= current_user2.email %></strong>.
+  <%= link_to "Edit profile", edit_user2_registration_path, class: "navbar-link" %> |
+  <%= link_to "Logout", destroy_user2_session_path, method: :delete, class: "navbar-link"  %>
+<% else %>
+  <%= link_to "Sign up", new_user2_registration_path, class: "navbar-link"  %> |
+  <%= link_to "Login", new_user2_session_path, class: "navbar-link"  %>
+<% end %>
+</p>
+  <body>
+    <%= yield %>
+  </body>
+</html>
