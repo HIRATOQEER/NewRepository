@@ -2,17 +2,17 @@
 
 <%= form_with model: @contact do |form| %>
   <div>
-    <%= form.label :PhoneNumber %><br>
-    <%= form.text_field :PhoneNumber %>
+    <%= form.label :phone %><br>
+    <%= form.text_field :phone %>
     <% @contact.errors.full_messages_for(:PhoneNumber).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div>
-    <%= form.label :Name %><br>
-    <%= form.text_field :Name %><br>
-    <% @contact.errors.full_messages_for(:Name).each do |message| %>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %><br>
+    <% @contact.errors.full_messages_for(:name).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>

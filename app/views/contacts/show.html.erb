@@ -1,20 +1,24 @@
-
-
 <div class="jumbotron">
   <h1 class="display-4">
     <%=@contact.phone%>
     <%=@contact.name%>
-
+     <%=@contact.email%>
   </h1>
   <p class="lead">
-
-
-  
    <%=@contact.phone%>
    <%=@contact.name%>
-  
+   <%=@contact.email%>
    </p
-
+   <br>
+   <br>
+    <%= link_to "Edit this friend", edit_contact_path(@contact) ,class:"btn btn-secondary"%> 
+   <br>
+   <br>
+     <%= link_to "Delete", @contact, data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  }, class:"btn btn-danger btn-sm" %>
+   <%= link_to "Back to friends", contacts_path,class:"btn btn-secondary" %>
    <br>
    <br>
    <hr class="my-4">

@@ -1,11 +1,12 @@
 <%= form_with model: [ @user2, @user2.contacts.build ] do |form| %>
+
   <p>
-    <%= form.label :Name %><br>
-    <%= form.text_field :Name %>
+    <%= form.label :name %><br>
+    <%= form.text_field :name ,name:"name"%>
   </p>
   <p>
-    <%= form.label :PhoneNumber %><br>
-    <%= form.text_field :PhoneNumber %>
+    <%= form.label :phone %><br>
+    <%= form.text_field :phone %>
   </p>
       <p>
     <%= form.label :email %><br>
